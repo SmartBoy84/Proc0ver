@@ -6,7 +6,8 @@ const Path = require("path")
 
 const Axios = require("axios")
 
-let resolve = (a) => `.${a ? "/" + a : ""}`
+let repoDir = "."
+let resolve = (a) => `${repoDir}${a ? "/" + a : ""}`
 
 Fs.mkdir(Path.resolve(resolve("debs")), { recursive: true })
 let updateRepo = async () => {
