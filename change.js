@@ -155,7 +155,11 @@ let updateRepo = async () => {
                         if (!Object.keys(serverPackages).includes(b)) {
                             console.log("Exterrrminate!!", b)
                             await Fs.unlink(resolve(`debs/${b}`))
-                                .catch(e => { throw e })
+                                .catch(e => {
+                                    if (e.code != "EISDIR") {
+                                        errors["redundancy_check"] = [...errors["redundancy_check"] ? errors["redundancy_check"] : [], e]
+                                    }
+                                })
                         }
                     }))
 
