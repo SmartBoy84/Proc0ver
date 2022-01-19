@@ -1,4 +1,4 @@
-# Proc0ver
+# [Proc0ver](https://repo.gabba.ga/)
 A set of scripts to enable running packages hosted on the procursus repo to run on unc0ver based jailbreaks.
 
 It does this by converting the deb compression from zst to bzip since the DPKG version that comes with unc0ver does not support the zst compression and attempting to upgrade it causes unc0ver to stall during the jailbreak process.
@@ -33,4 +33,5 @@ It does this by converting the deb compression from zst to bzip since the DPKG v
 * Clean up
 
 ### Note(s):
-By default the scripts downlaod the repository files to the root folder, you can change this by setting the "rootDir" variable in change.js to the full (ideally not relative) path.
+* By default the scripts downlaod the repository files to the root folder, you can change this by setting the "rootDir" variable in change.js to the full (ideally not relative) path.
+* I catch all possible errors, so do not mistake any errors output to stdout as the program failing - you can see these errors after completion in the "errors" file
