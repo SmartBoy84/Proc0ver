@@ -3,7 +3,7 @@ mkdir "$1.extract"
 dpkg-deb -R "$1" "$1.extract"
 rm "$1"
 
-cat "$1.extract/DEBIAN/control" | perl -pe 's/\s?liblzma5(.*?)\s?,\s?/ /'>tmpcontrol
+cat "$1.extract/DEBIAN/control" | perl -pe 's/,?\s*?liblzma5(.*?)\s*?(?=\n|,)\s*?/ /i'>tmpcontrol
 cat tmpcontrol > "$1.extract/DEBIAN/control"
 
 dpkg-deb -b "-Z$COMP" "$1.extract" "$1"
