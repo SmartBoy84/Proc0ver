@@ -7,15 +7,15 @@ It does this by converting the deb compression from zst to bzip since the DPKG v
 * Optionally, 
   * set the rootDir in change.js to your repo's root directory
   * change the "debs" folder (by default it is rootDir/debs)
-* Initialize app through "npm init"
-* Run using "node change.js" (*Note* first time setups take 3-4 hours due to how many packages there are \[4gb>\])
+* Initialize app by running _npm init_
+* Run running _node change.js_ (*Note* first time setups take 3-4 hours due to how many packages there are \[4gb>\])
 
 # Files:
-* 'change.js' - primary script for donwloading, upgrading, syncing and converting packages
-* 'change.sh' - bash script to change deb compression type
-* 'package.js' - standalone script to initialize/update Packages file
-* 'debug.sh' - script to start up in debuging mode (*Dangerous* deletes 'debs' folder)
-* 'printErrors.sh' - script to display errors
+* **'change.js'** - primary script for donwloading, upgrading, syncing and converting packages
+* **'change.sh'** - bash script to change deb compression type
+* **'package.js'** - standalone script to initialize/update Packages file
+* **'debug.sh'** - script to start up in debuging mode (*Dangerous* deletes 'debs' folder)
+* **'printErrors.sh'** - script to display errors
 
 # Sync & conversion process:
 * Donwload page listing all the packages in the procursus repo
