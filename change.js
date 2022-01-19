@@ -141,6 +141,8 @@ let updateRepo = async () => {
                         .replace(/(?<=size:\s).*(?=\n)/i, details["size"])
 
                         .replace(/sha512:.*\n/i, "")
+                        .replace(/,?\s*?liblzma(.*?)\s*?(?=\n|,)\s*?/g, "")
+
                 })
 
                 await Fs.writeFile(resolve("Packages"), Object.values(diskPackages).join("\n"), { flag: "w" })

@@ -60,6 +60,8 @@ let updatePackages = async () => {
                         .replace(/(?<=size:\s).*(?=\n)/i, size)
 
                         .replace(/sha512:.*\n/i, "")
+                        .replace(/,?\s*?liblzma(.*?)\s*?(?=\n|,)\s*?/g, "")
+
                 )
             }
         }
