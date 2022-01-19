@@ -10,14 +10,14 @@ It does this by converting the deb compression from zst to bzip since the DPKG v
 * Initialize app by running **npm init**
 * Run running **node change.js** (*Note* first time setups take 3-4 hours due to how many packages there are \[4gb>\])
 
-# Files:
+### Files:
 * **'change.js'** - primary script for donwloading, upgrading, syncing and converting packages
 * **'change.sh'** - bash script to change deb compression type
 * **'package.js'** - standalone script to initialize/update Packages file
 * **'debug.sh'** - script to start up in debuging mode (*Dangerous* deletes 'debs' folder)
 * **'printErrors.sh'** - script to display errors
 
-# Sync & conversion process:
+### Sync & conversion process:
 * Donwload page listing all the packages in the procursus repo
 * Scrape package links and date of last update
 * Filter packages which are already present on disk by comparing their update/upload date to the last update date stored on disk
@@ -32,5 +32,5 @@ It does this by converting the deb compression from zst to bzip since the DPKG v
 * Write any errors to disk and update "lastupdated" file
 * Clean up
 
-# Note(s):
+### Note(s):
 By default the scripts downlaod the repository files to the root folder, you can change this by setting the "rootDir" variable in change.js to the full (ideally not relative) path.
