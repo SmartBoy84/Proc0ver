@@ -1,0 +1,8 @@
+node_modules
+Packages*
+tmpcontrol
+*.deb
+debs
+errors
+latest
+log
