@@ -7,5 +7,5 @@ cat "$1.extract/DEBIAN/control" | perl -pe 's/,?\s*?liblzma5(.*?)\s*?(?=\n|,)\s*
 cat tmpcontrol > "$1.extract/DEBIAN/control"
 
 dpkg-deb -b "-Z$COMP" "$1.extract" "$1"
-rm -rf "*.extract"
+rm -rf *.extract
 rm tmpcontrol
