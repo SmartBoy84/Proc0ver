@@ -1,0 +1,8 @@
+Origin: Proc0ver
+Label: Proc0ver
+Suite: stable
+Version: 1.0
+Codename: Proc0ver
+Architectures: iphoneos-arm
+Components: main
+Description: Curde mirror for the procursus repo hosting debs compressed with GZIP compression to allow installation on unc0ver jailbreaks
