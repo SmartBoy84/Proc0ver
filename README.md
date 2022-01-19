@@ -34,3 +34,4 @@ It does this by converting the deb compression from zst to bzip since the DPKG v
 
 ### Note(s):
 By default the scripts downlaod the repository files to the root folder, you can change this by setting the "rootDir" variable in change.js to the full (ideally not relative) path.
+I catch all possible errors, so do not mistake any errors output to stdout as the program failing - you can see these errors after completion in the "errors" file
