@@ -18,7 +18,7 @@ It does this by converting the deb compression from zst to bzip since the DPKG v
 * **'printErrors.sh'** - script to display errors
 
 ### Sync & conversion process:
-* Donwload page listing all the packages in the procursus repo
+* Download page listing all the packages in the procursus repo
 * Scrape package links and date of last update
 * Filter packages which are already present on disk by comparing their update/upload date to the last update date stored on disk
 * Download the packages file from the server and read from disk
