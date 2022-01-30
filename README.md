@@ -8,7 +8,7 @@ It does this by converting the deb compression from zst to bzip since the DPKG v
   * set the rootDir in change.js to your repo's root directory
   * change the "debs" folder (by default it is rootDir/debs)
 * Initialize app by running **npm init**
-* Run running **node change.js** (*Note* first time setups take 3-4 hours due to how many packages there are \[4gb>\])
+* Run by running **node change.js** (*Note* first time setups take 3-4 hours due to how many packages there are \[4gb>\])
 
 ### Files:
 * **'change.js'** - primary script for donwloading, upgrading, syncing and converting packages
